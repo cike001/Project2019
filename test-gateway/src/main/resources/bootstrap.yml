@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  application:
+      name: test-gateway
+  cloud:
+    gateway:
+      routes:
+        -id: user-service
+        uri: lb://user-service
+        predicates:
+        - Path=/api/user/**
+        filters:
+        - StripPrefix=1
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+
