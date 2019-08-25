@@ -14,6 +14,7 @@ public class DockerController {
 
     @RequestMapping("/info")
     public String info(){
+        System.out.println("======");
         return "hello docker";
     }
 
