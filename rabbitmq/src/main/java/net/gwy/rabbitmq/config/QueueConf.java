@@ -1,5 +1,6 @@
 package net.gwy.rabbitmq.config;
 
+import net.gwy.rabbitmq.util.RabbitConstans;
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +14,7 @@ public class QueueConf {
 
     @Bean
     public Queue queue(){
-        return new Queue("queue");
+        return new Queue(RabbitConstans.QUEUE_01);
     }
 
 }

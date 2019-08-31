@@ -25,11 +25,9 @@ public class MessageController {
 
     @RequestMapping(value = "/sendMsg",method = RequestMethod.POST)
     public void sendMsg(@RequestBody String message){
-        log.info("=========>sendMsg,message:{}",message);
         JSONObject jsonObject = JSON.parseObject(message);
         String msg = jsonObject.getString("message");
-        log.info("=========>sendMsg,msg:{}",msg);
-
+        log.info("=========>生产者发送消息:{}<=========",msg);
         messageService.sendMsg(msg);
         log.info("=========>消息发送成功<=========");
     }

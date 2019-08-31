@@ -13,6 +13,7 @@
         <module name="monitor" />
         <module name="mybatisplus-generator" />
         <module name="rabbitmq" />
+        <module name="ratelimiter" />
         <module name="spring-boot-cache" />
         <module name="test" />
         <module name="test-gateway" />

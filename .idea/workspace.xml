@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b660399-360f-438c-b6c3-3837137c56d7" name="Default" comment="add mybatisplus-generator">
+      <change afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/CustomConfirmCallBack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/src/main/java/net/gwy/test/test/util/HttpClientUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_58.xml" beforeDir="false" />
@@ -253,9 +254,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apollo-client/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elasticsearch/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/elasticsearch/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monitor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/monitor/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatisplus-generator/src/main/java/net/gwy/mybatisplusgenerator/controller/UserController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatisplus-generator/src/main/java/net/gwy/mybatisplusgenerator/mapper/UserMapper.java" beforeDir="false" />
@@ -264,6 +265,11 @@
       <change beforePath="$PROJECT_DIR$/mybatisplus-generator/src/main/java/net/gwy/mybatisplusgenerator/service/impl/UserServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatisplus-generator/src/main/resources/mapper/UserMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatisplus-generator/src/test/java/net/gwy/mybatisplusgenerator/MybatisplusGeneratorApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/config/QueueConf.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/config/QueueConf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageReceive.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageReceive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/src/test/java/net/gwy/test/test/TestApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/test/java/net/gwy/test/test/TestApplicationTests.java" afterDir="false" />
@@ -282,6 +288,7 @@
     <ignored path="$PROJECT_DIR$/mybatisplus-generator/target/" />
     <ignored path="$PROJECT_DIR$/apollo-client/target/" />
     <ignored path="$PROJECT_DIR$/docker/target/" />
+    <ignored path="$PROJECT_DIR$/ratelimiter/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -305,97 +312,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apollo-client/src/main/resources/application.properties">
+      <file leaf-file-name="MessageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/controller/MessageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="6" selection-start-line="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="226">
+              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="176">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker/src/main/resources/application.properties">
+      <file leaf-file-name="CustomConfirmCallBack.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/CustomConfirmCallBack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DockerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker/src/main/java/net/gwy/docker/controller/DockerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="82">
+              <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-                <element signature="e#384#385#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DockerApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker/src/main/java/net/gwy/docker/DockerApplication.java">
+      <file leaf-file-name="MessageService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="167">
+              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="docker-maven-plugin-0.4.13.pom" pinned="false" current-in-tab="false">
-        <entry file="file://$MAVEN_REPOSITORY$/com/spotify/docker-maven-plugin/0.4.13/docker-maven-plugin-0.4.13.pom">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-880">
-              <caret line="5" column="33" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom-4.0.0.xml" pinned="false" current-in-tab="false">
-        <entry file="jar://E:/it_tools/maven/apache-maven-3.5.4/lib/maven-model-builder-3.5.4.jar!/org/apache/maven/model/pom-4.0.0.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1166">
-              <caret line="53" column="15" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docker/src/main/docker/Dockerfile">
+      <file leaf-file-name="RabbitConstans.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/util/RabbitConstans.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="36" lean-forward="true" selection-start-column="5" selection-end-column="36" />
+              <caret column="29" selection-start-column="29" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/src/main/java/net/gwy/user/UserApplication.java">
+      <file leaf-file-name="AmqpTemplate.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.1.6.RELEASE/spring-amqp-2.1.6.RELEASE.jar!/org/springframework/amqp/core/AmqpTemplate.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="318">
+              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RabbitmqApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/RabbitmqApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageReceive.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageReceive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="94">
+              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+              <folding>
+                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#419#420#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageReceive2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageReceive2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+              <folding>
+                <element signature="e#363#364#0" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueueConf.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/config/QueueConf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="16" column="48" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="48" />
+              <folding>
+                <element signature="e#317#318#0" expanded="true" />
+                <element signature="e#358#359#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -435,7 +452,6 @@
         <option value="$PROJECT_DIR$/elasticsearch/src/main/java/net/gwy/elasticsearch/UserRepository.java" />
         <option value="$PROJECT_DIR$/elasticsearch/src/main/java/net/gwy/elasticsearch/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/elasticsearch/src/main/java/net/gwy/elasticsearch/entity/User.java" />
-        <option value="$PROJECT_DIR$/elasticsearch/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/elasticsearch/src/main/java/net/gwy/elasticsearch/controller/UserController.java" />
         <option value="$PROJECT_DIR$/mybatisplus-generator/src/main/java/net/gwy/mybatisplusgenerator/AutoGeneratorFactoryBean.java" />
         <option value="$PROJECT_DIR$/test/src/main/resources/application.properties" />
@@ -450,13 +466,26 @@
         <option value="$PROJECT_DIR$/apollo-client/src/main/resources/META-INF/app.properties" />
         <option value="$PROJECT_DIR$/apollo-client/pom.xml" />
         <option value="$PROJECT_DIR$/apollo-client/src/main/java/net/gwy/apolloclient/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/apollo-client/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/apollo-client/src/main/java/net/gwy/apolloclient/ApolloClientApplication.java" />
         <option value="$PROJECT_DIR$/user/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/docker/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/docker/pom.xml" />
-        <option value="$PROJECT_DIR$/docker/src/main/java/net/gwy/docker/controller/DockerController.java" />
         <option value="$PROJECT_DIR$/docker/src/main/docker/Dockerfile" />
+        <option value="$PROJECT_DIR$/docker/src/main/java/net/gwy/docker/controller/DockerController.java" />
+        <option value="$PROJECT_DIR$/elasticsearch/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/apollo-client/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/ratelimiter/pom.xml" />
+        <option value="$PROJECT_DIR$/ratelimiter/src/main/java/net/gwy/ratelimiter/RateLimiterService.java" />
+        <option value="$PROJECT_DIR$/ratelimiter/src/main/java/net/gwy/ratelimiter/BusiService.java" />
+        <option value="$PROJECT_DIR$/ratelimiter/src/main/java/net/gwy/ratelimiter/TestController.java" />
+        <option value="$PROJECT_DIR$/rabbitmq/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/controller/MessageController.java" />
+        <option value="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/CustomConfirmCallBack.java" />
+        <option value="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/RabbitConstans.java" />
+        <option value="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/config/QueueConf.java" />
+        <option value="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageReceive.java" />
+        <option value="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageReceive2.java" />
+        <option value="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageService.java" />
       </list>
     </option>
   </component>
@@ -520,7 +549,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -532,55 +561,82 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Project2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -598,24 +654,28 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq" />
     <property name="last_opened_file_path" value="E:/devloper_install/Git/bin/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\Project2019\mybatisplus-generator\src\main\resources\mapper" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="net.gwy.mybatisplusgenerator" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.gwy.rabbitmq.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\project\Project2019\apollo-client\src\main\resources\META-INF" />
       <recent name="E:\project\Project2019\mybatisplus-generator\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\project\Project2019\mybatisplus-generator\src\main\resources\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -630,7 +690,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DockerApplication">
+  <component name="RunManager" selected="Spring Boot.RabbitmqApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -757,6 +817,10 @@
       <module name="rabbitmq" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="net.gwy.rabbitmq.RabbitmqApplication" />
     </configuration>
+    <configuration name="RatelimiterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ratelimiter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.gwy.ratelimiter.RatelimiterApplication" />
+    </configuration>
     <configuration name="SpringBootCacheApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-boot-cache" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="net.gwy.cache.SpringBootCacheApplication" />
@@ -806,10 +870,11 @@
       <item itemvalue="Spring Boot.ElasticsearchApplication" />
       <item itemvalue="Spring Boot.MybatisplusGeneratorApplication" />
       <item itemvalue="Spring Boot.ApolloClientApplication" />
+      <item itemvalue="Spring Boot.DockerApplication" />
+      <item itemvalue="Spring Boot.RatelimiterApplication" />
       <item itemvalue="JUnit.TestApplicationTests.contextLoads2" />
       <item itemvalue="JUnit.MybatisplusGeneratorApplicationTests.contextLoads" />
       <item itemvalue="JUnit.MybatisplusGeneratorApplicationTests.contextLoads2" />
-      <item itemvalue="Spring Boot.DockerApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -850,7 +915,10 @@
       <workItem from="1566395972834" duration="5505000" />
       <workItem from="1566571351401" duration="2234000" />
       <workItem from="1566724438938" duration="1672000" />
-      <workItem from="1566726281138" duration="3108000" />
+      <workItem from="1566726281138" duration="5240000" />
+      <workItem from="1566828496176" duration="3493000" />
+      <workItem from="1566985183733" duration="6651000" />
+      <workItem from="1567215692203" duration="7879000" />
     </task>
     <task id="LOCAL-00001" summary="add mybatisplus-generator">
       <created>1563696564091</created>
@@ -887,7 +955,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565445272409</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add">
+      <created>1566730356791</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1566730356791</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add">
+      <created>1566730716428</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566730716428</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -923,7 +1005,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70172000" />
+    <option name="totallyTimeSpent" value="90327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -931,7 +1013,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.20045386" />
+      <window_info anchor="right" id="Maven Projects" order="9" weight="0.20045386" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
@@ -939,7 +1021,7 @@
       <window_info id="Structure" order="1" sideWeight="0.50510204" side_tool="true" weight="0.30484116" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4217687" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42078364" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32993197" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
@@ -947,10 +1029,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32879046" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.45144805" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39182281" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.4463373" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49489796" visible="true" weight="0.23903178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49489796" visible="true" weight="0.23298033" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -994,56 +1076,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-openfeign-core/2.1.1.RELEASE/spring-cloud-openfeign-core-2.1.1.RELEASE.jar!/org/springframework/cloud/openfeign/FeignClientsRegistrar.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.6.RELEASE/spring-boot-autoconfigure-2.1.6.RELEASE.jar!/org/springframework/boot/autoconfigure/AutoConfigurationPackage.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.6.RELEASE/spring-boot-autoconfigure-2.1.6.RELEASE.jar!/org/springframework/boot/autoconfigure/AutoConfigurationImportSelector.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.6.RELEASE/spring-boot-autoconfigure-2.1.6.RELEASE.jar!/org/springframework/boot/autoconfigure/EnableAutoConfiguration.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.6.RELEASE/spring-boot-autoconfigure-2.1.6.RELEASE.jar!/org/springframework/boot/autoconfigure/SpringBootApplication.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-annotation/3.1.2/mybatis-plus-annotation-3.1.2.jar!/com/baomidou/mybatisplus/annotation/DbType.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-generator/3.1.2/mybatis-plus-generator-3.1.2.jar!/com/baomidou/mybatisplus/generator/config/StrategyConfig.class" />
-    <entry file="file://$PROJECT_DIR$/mybatisplus-generator/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatisplus-generator/src/test/java/net/gwy/mybatisplusgenerator/MybatisplusGeneratorApplicationTests.java" />
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/net/gwy/user/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/2.0.1/mybatis-spring-boot-autoconfigure-2.0.1.jar!/META-INF/spring.factories" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/2.0.1/mybatis-spring-boot-autoconfigure-2.0.1.jar!/org/mybatis/spring/boot/autoconfigure/MybatisProperties.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/2.0.1/mybatis-spring-boot-autoconfigure-2.0.1.jar!/org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/2.0.1/mybatis-spring-boot-autoconfigure-2.0.1.jar!/org/mybatis/spring/boot/autoconfigure/ConfigurationCustomizer.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/builder/SqlSourceBuilder.class" />
-    <entry file="jar://E:/jdk1.8/src.zip!/com/sun/org/apache/xerces/internal/jaxp/DocumentBuilderImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="325" column="20" selection-start-line="325" selection-start-column="20" selection-end-line="325" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/parsing/XPathParser.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/builder/xml/XMLConfigBuilder.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/session/SqlSessionFactoryBuilder.class" />
-    <entry file="file://$PROJECT_DIR$/elastic-job/src/main/java/net/gwy/elasticjob/job/SimpleDemoJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apollo-client/src/main/resources/META-INF/app.properties" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/ctrip/framework/apollo/apollo-client/1.4.0/apollo-client-1.4.0.jar!/com/ctrip/framework/apollo/spring/util/SpringInjector.class" />
-    <entry file="file://$PROJECT_DIR$/test-gateway/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test-gateway/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1126,30 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apollo-client/src/main/java/net/gwy/apolloclient/ApolloClientApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apollo-client/src/main/java/net/gwy/apolloclient/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elasticsearch/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apollo-client/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="6" selection-start-line="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/src/main/java/net/gwy/user/UserApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1199,22 +1207,243 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/src/main/java/net/gwy/docker/controller/DockerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker/src/main/docker/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="36" lean-forward="true" selection-start-column="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/src/main/java/net/gwy/docker/controller/DockerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elasticsearch/src/main/java/net/gwy/elasticsearch/ElasticsearchApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elasticsearch/src/main/java/net/gwy/elasticsearch/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elasticsearch/src/main/java/net/gwy/elasticsearch/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elasticsearch/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-data-elasticsearch/2.1.6.RELEASE/spring-boot-starter-data-elasticsearch-2.1.6.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1144">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-elasticsearch/3.1.9.RELEASE/spring-data-elasticsearch-3.1.9.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apollo-client/src/main/java/net/gwy/apolloclient/ApolloClientApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apollo-client/src/main/java/net/gwy/apolloclient/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apollo-client/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ratelimiter/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ratelimiter/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/28.0-jre/guava-28.0-jre.jar!/com/google/common/util/concurrent/RateLimiter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elasticsearch/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ratelimiter/src/main/java/net/gwy/ratelimiter/BusiService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ratelimiter/src/main/java/net/gwy/ratelimiter/RatelimiterApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ratelimiter/src/main/java/net/gwy/ratelimiter/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ratelimiter/src/main/java/net/gwy/ratelimiter/RateLimiterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/RabbitmqApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.1.6.RELEASE/spring-amqp-2.1.6.RELEASE.jar!/org/springframework/amqp/support/converter/SimpleMessageConverter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.1.6.RELEASE/spring-amqp-2.1.6.RELEASE.jar!/org/springframework/amqp/core/AmqpTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/util/RabbitConstans.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/config/QueueConf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="48" />
+          <folding>
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/CustomConfirmCallBack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageReceive2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding>
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageReceive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/controller/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq/src/main/java/net/gwy/rabbitmq/service/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
         </state>
       </provider>
     </entry>
