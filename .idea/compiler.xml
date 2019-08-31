@@ -2,13 +2,16 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="apollo-client" />
+        <module name="docker" />
         <module name="elastic-job" />
+        <module name="elasticsearch" />
         <module name="monitor" />
+        <module name="mybatisplus-generator" />
         <module name="rabbitmq" />
         <module name="spring-boot-cache" />
         <module name="test" />
@@ -16,14 +19,6 @@
         <module name="user" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="elastic-job" target="1.8" />
-      <module name="monitor" target="1.8" />
-      <module name="rabbitmq" target="1.8" />
-      <module name="spring-boot-cache" target="1.8" />
-      <module name="test" target="1.8" />
-      <module name="test-gateway" target="1.8" />
-      <module name="user" target="1.8" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>
