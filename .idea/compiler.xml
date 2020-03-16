@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="apollo-client" />
+        <module name="demo" />
         <module name="docker" />
         <module name="elastic-job" />
         <module name="elasticsearch" />

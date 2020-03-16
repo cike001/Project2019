@@ -1,11 +1,9 @@
 package net.gwy.test.test.controller;
 
 import net.gwy.test.test.client.UserClient;
+import net.gwy.test.test.util.AAA;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author guoweiyang
@@ -15,12 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class TestController {
 
-    @Autowired
-    UserClient  userClient;
+//    @Autowired
+//    UserClient  userClient;
 
-    @RequestMapping(value = "/checkUser/{id}",method = RequestMethod.GET)
-    public Boolean judgeUser(@PathVariable("id") String id){
-        System.out.println("test-service:"+id);
-        return userClient.isExistsUser(id);
+    @RequestMapping(value = "/checkUser",method = RequestMethod.POST)
+    public Boolean judgeUser(@RequestBody AAA aaa){
+       /* System.out.println("test-service:"+id);
+        return userClient.isExistsUser(id);*/
+        System.out.println(aaa.getMobile());
+       return true;
     }
 }

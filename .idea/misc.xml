@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/apollo-client/pom.xml" />
         <option value="$PROJECT_DIR$/docker/pom.xml" />
         <option value="$PROJECT_DIR$/ratelimiter/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/pom.xml" />
       </list>
     </option>
   </component>
