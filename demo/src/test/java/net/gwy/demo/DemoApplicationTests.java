@@ -13,18 +13,9 @@ public class DemoApplicationTests {
     @Test
     public void contextLoads() {
 
-         RestResponse s =  get();
-
-
-        Integer st = 0;
 
 
     }
 
-    public RestResponse get() {
-        RestResponse rr = new RestResponse();
-        rr.setStatus(EnumStatus.FAILURE);
-        return rr;
-    }
 
 }
